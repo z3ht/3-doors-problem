@@ -9,7 +9,7 @@ public class ThreeDoors {
 	}
 	
 	public ThreeDoors(int trials) {
-		if(trials == 0)
+		if(trials < 1)
 			this.trials = 1;
 		else
 			this.trials = trials;
