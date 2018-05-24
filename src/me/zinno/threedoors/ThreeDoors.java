@@ -17,11 +17,11 @@ public class ThreeDoors {
 	
 	public double calculateOriginalChoiceSuccessRate() {
 		int successAmount = 0;
-		final long trials = this.trials;
+		final long currentTrials = this.trials;
 		long c = 0;
-		while(c++ < trials)
+		while(c++ < currentTrials)
 			successAmount += (individualOriginalChoiceSuccessRate()) ? 1 : 0;
-		return (double) successAmount/trials;
+		return (double) successAmount/currentTrials;
 	}
 	
 	private boolean individualOriginalChoiceSuccessRate() {
