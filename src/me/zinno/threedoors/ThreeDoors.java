@@ -9,10 +9,7 @@ public class ThreeDoors {
 	}
 	
 	public ThreeDoors(int trials) {
-		if(trials < 1)
-			this.trials = 1;
-		else
-			this.trials = trials;
+		setTrials(trials);
 	}
 	
 	public double calculateOriginalChoiceSuccessRate() {
@@ -33,7 +30,10 @@ public class ThreeDoors {
 	}
 	
 	public void setTrials(long trials) {
-		this.trials = trials;
+		if(trials < 1)
+			this.trials = 1;
+		else
+			this.trials = trials;
 	}
 	
 	public static void main(String[] args) {
